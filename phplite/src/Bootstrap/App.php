@@ -2,7 +2,9 @@
 
 namespace Phplite\Bootstrap;
 
+use Phplite\Cookie\Cookie;
 use Phplite\Exceptions\Whoops;
+use Phplite\Session\Session;
 
 class App
 {
@@ -21,7 +23,12 @@ class App
      */
     public static function run()
     {
+        // Register Whoops
         Whoops::handle();
-        throw new \Exception('there is an error from app run');
+
+        // Start Session
+        Session::start();
+
+        var_dump(Cookie::destroy());
     }
 }
