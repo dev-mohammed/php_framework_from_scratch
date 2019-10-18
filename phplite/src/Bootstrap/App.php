@@ -4,6 +4,7 @@ namespace Phplite\Bootstrap;
 
 use Phplite\Cookie\Cookie;
 use Phplite\Exceptions\Whoops;
+use Phplite\Http\Server;
 use Phplite\Session\Session;
 
 class App
@@ -29,6 +30,6 @@ class App
         // Start Session
         Session::start();
 
-        var_dump(Cookie::destroy());
+        var_dump(Server::pathInfo('http://localhost:8080/tuts/php_framework/public'));
     }
 }
