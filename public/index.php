@@ -26,5 +26,5 @@ require __DIR__ . '/../bootstrap/app.php';
 |
 | Handle the request and send response
  */
-$app = Application::run();
+Application::run();
 
